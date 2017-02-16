@@ -1,3 +1,4 @@
+import sys
 from collections import deque
 
 
@@ -80,9 +81,16 @@ class Trie:
 
 if __name__ == '__main__':
     t=Trie()
-    t.insert("Devansh")
-    t.insert("Dev")
-    a=t.get_possible_words("ev")
-    b=t.__contains__("ev")
+
+    file = open("read.txt", "r")
+    count=0
+
+    for line in file:
+        count=count+1
+        t.insert(line)
+    
+    person=input()
+    a=t.get_possible_words(person)
+    b=t.__contains__("person")
     print(a)
     print(b)
