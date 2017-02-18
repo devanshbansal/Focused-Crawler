@@ -91,6 +91,6 @@ if __name__ == '__main__':
     
     person=input()
     a=t.get_possible_words(person)
-    b=t.__contains__("person")
+    b=t.__contains__(person)
     print(a)
     print(b)
